@@ -1,482 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Loja PCISMO!|E-commerce de Tecnologia</title>
-    <style>
-    :root {
-           --primary-red: #b81a05;
-           --secondary-orange: #ff5722;
-           --primary-blue: #004a87; 
-           --dark-blue: #003366;
-           --background-gray: #f8fcff;
-           --white: #ffffff;
-           --text-dark: #2c3e50;
-           --text-light: #7f8c8d;
-}
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--background-gray);
-            color: var(--text-dark);
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
-            color: white;
-            width: 100%;
-            position: sticky; 
-            top: 0;            
-            z-index: 1000;    
-            box-shadow: 0 4px 20px rgba(0,74,135,0.3);
-            .top-bar {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-         font-size: 36px !important;  
-         font-weight: 900;            
-         font-style: italic;
-         background: linear-gradient(45deg, var(--secondary-orange), #ff8a50);
-         -webkit-background-clip: text;
-         -webkit-text-fill-color: transparent;
-         background-clip: text;
-         text-shadow: none;
-         text-decoration: none;
-         flex-shrink: 0;
-        }
-        }
-
-        .logo span {
-            color: var(--secondary-orange);
-        }
-
-        .search-container {
-            flex-grow: 1;
-            margin: 0 30px;
-            position: relative;
-        }
-
-        .cep-selector {
-            font-size: 11px;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .search-bar {
-            width: 100%;
-            height: 40px;
-            border-radius: 20px;
-            border: none;
-            padding: 0 50px 0 20px;
-            font-size: 14px;
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 5px;
-            bottom: 3px;
-            background-color: var(--secondary-orange);
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .user-area {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .user-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--white);
-            font-size: 12px;
-        }
-
-        .user-item i {
-            font-size: 20px;
-        }
-
-        .cart-badge {
-            background-color: var(--secondary-orange);
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 10px;
-            position: relative;
-            top: -10px;
-            left: -10px;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            background-color: var(--dark-blue);
-            width: 100%;
-        }
-
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links li a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 15px 12px;
-            display: block;
-            text-transform: uppercase;
-        }
-
-        .nav-links li a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-departments {
-            background-color: #d33403;
-            padding: 15px 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-        }
-
-        .monte-pc {
-            background-color: var(--secondary-orange);
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* MAIN CONTENT */
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        .hero-section {
-        margin-bottom: 40px;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .carousel-container {
-        display: flex;
-        width: calc(100% * 6 / 2);
-        gap: 20px;
-        height: 400px;
-        animation: slideInfinite 30s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-       @keyframes slideInfinite {
-       0%, 5% { transform: translateX(0); }
-       25%, 30% { transform: translateX(-16.66%); }
-       50%, 55% { transform: translateX(-33.33%); }
-       75%, 80% { transform: translateX(-50%); }
-       95%, 100% { transform: translateX(0); }
-        }
-        .banner {
-            min-width: calc(50% - 10px);
-            height: 350px;
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 40px;
-            color: white;
-            transition: transform 0.3s;
-        }
-
-        .banner:hover {
-            transform: scale(1.01);
-        }
-
-        .banner-left {
-            background: linear-gradient(135deg, #000000 0%, #0060b1 100%);
-            border-left: 5px solid var(--secondary-orange);
-        }
-
-        .banner-right {
-            background: linear-gradient(135deg, #004a87 0%, #000000 100%);
-            border-left: 5px solid var(--white);
-        }
-
-        .banner-ninja {
-            background: linear-gradient(135deg, #ff6500 0%, #ff8c00 100%);
-        }
-
-        .banner h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .banner p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .btn-banner {
-            background-color: var(--secondary-orange);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            width: fit-content;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* PRODUCT GRID */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .product-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .card-header h3 {
-            font-size: 14px;
-            color: var(--text-dark);
-            font-weight: bold;
-        }
-
-        .product-img {
-            width: 100%;
-            height: 150px;
-            background-color: #f9f9f9;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #ccc;
-            border-radius: 4px;
-        }
-
-        .product-info h4 {
-            font-size: 13px;
-            margin-bottom: 10px;
-            height: 40px;
-            overflow: hidden;
-            line-height: 1.4;
-        }
-
-        .price-container {
-            margin-top: auto;
-        }
-
-        .old-price {
-            font-size: 11px;
-            color: var(--text-light);
-            text-decoration: line-through;
-        }
-
-        .price {
-            color: var(--secondary-orange);
-            font-size: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .discount-tag {
-            background-color: #1f9050;
-            color: white;
-            font-size: 10px;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-
-        .grid-internal {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .grid-item {
-            text-align: center;
-        }
-
-        .grid-item img {
-            width: 100%;
-            height: 60px;
-            background: #f9f9f9;
-            object-fit: contain;
-        }
-
-        .grid-item .mini-discount {
-            font-size: 9px;
-            color: #1f9050;
-            font-weight: bold;
-        }
-
-        /* CATEGORIES */
-        .categories-nav {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 40px 20px;
-            margin-top: 50px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-            font-size: 13px;
-        }
-
-        .footer-section ul li a {
-            color: #ccc;
-            text-decoration: none;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 12px;
-            color: #ccc;
-        }
-
-        .category-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .category-icon {
-            width: 60px;
-            height: 60px;
-            background-color: var(--dark-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-        }
-
-        .icon-placeholder::before {
-            content: '🔍';
-        }
-
-        .icon-user::before {
-            content: '👤';
-        }
-
-        .icon-heart::before {
-            content: '❤️';
-        }
-
-        .icon-cart::before {
-            content: '🛒';
-        }
-
-        .icon-menu::before {
-            content: '☰';
-        }
-
-        .icon-arrow::before {
-            content: '➔';
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
@@ -485,9 +17,9 @@
             <div class="search-container">
                 <div class="cep-selector"> <span>📍 Enviar para: <b>Digite o CEP</b></span> </div> <input type="text"
                     class="search-bar" placeholder="Busque na Loja!">
-                <div class="search-icon"> <span class="icon-placeholder"></span> </div>
+                <div class="search-icon"> <i class="bi bi-search"></i> </div>
             </div>
-            <div class="user-area"> <a href="login.html" class="user-item"> <span class="icon-user"></span>
+            <div class="user-area"> <a href="/pages/login.html" class="user-item"> <span class="icon-user"></span>
                     <div> <span>Olá, faça seu <b>Login</b></span><br> <span>ou <b>Cadastre-se</b></span> </div>
                 </a> <a href="#" class="user-item"><span class="icon-heart"></span></a> <a href="#" class="user-item">
                     <span class="icon-cart"></span> <span class="cart-badge">0</span> </a> </div>
@@ -531,7 +63,9 @@
                 <div class="card-header">
                     <h3>Visto recentemente</h3> <span class="icon-arrow" style="color: var(--secondary-orange);"></span>
                 </div>
-                <div class="product-img">📦 CPU AMD</div>
+                <div class="product-img">
+                    <img src="./MEDIA/Processador.webp" />
+                </div>
                 <div class="product-info">
                     <h4>Processador AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo), Cache 36MB, AM4</h4>
                     <div class="price-container">
@@ -545,7 +79,9 @@
                     <h3>Ofertas Loja!</h3> <span class="icon-arrow" style="color: var(--secondary-orange);"></span>
                 </div>
                 <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                    <div style="width: 60px; height: 60px; background: #f9f9f9;">🎧</div>
+                    <div style="width: 60px; background: #f9f9f9;">
+                        <img class="item-img" src="/MEDIA/Headset Havit.webp" />
+                    </div>
                     <div>
                         <h4 style="font-size: 11px; margin: 0;">Headset Gamer Havit</h4>
                         <div class="price" style="font-size: 14px;">R$ 169,97 <span class="discount-tag">-24%</span>
@@ -553,7 +89,9 @@
                     </div>
                 </div>
                 <div style="display: flex; gap: 10px;">
-                    <div style="width: 60px; height: 60px; background: #f9f9f9;">🖥️</div>
+                    <div style="width: 60px; background: #f9f9f9;">
+                        <img class="item-img" src="/MEDIA/Monitor Concordia.png" />
+                    </div>
                     <div>
                         <h4 style="font-size: 11px; margin: 0;">Monitor Concórdia 27"</h4>
                         <div class="price" style="font-size: 14px;">R$ 649,00 <span class="discount-tag">-10%</span>
@@ -566,7 +104,9 @@
                     <h3>Ofertas do dia</h3> <span class="icon-arrow" style="color: var(--secondary-orange);"></span>
                 </div>
                 <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                    <div style="width: 60px; height: 60px; background: #f9f9f9;">🔧</div>
+                    <div style="width: 60px; height: 60px; background: #f9f9f9;">
+                         <img class="item-img" src="/MEDIA/Placa mãe.webp" />
+                    </div>
                     <div>
                         <h4 style="font-size: 11px; margin: 0;">Placa-Mãe Husky B550</h4>
                         <div class="price" style="font-size: 14px;">R$ 499,99 <span class="discount-tag">-31%</span>
@@ -574,7 +114,9 @@
                     </div>
                 </div>
                 <div style="display: flex; gap: 10px;">
-                    <div style="width: 60px; height: 60px; background: #f9f9f9;">📹</div>
+                    <div style="width: 60px; height: 60px; background: #f9f9f9;">
+                        <img class="item-img" src="/MEDIA/camera de segurança.avif" />
+                    </div>
                     <div>
                         <h4 style="font-size: 11px; margin: 0;">Câmera de Segurança</h4>
                         <div class="price" style="font-size: 14px;">R$ 134,99 <span class="discount-tag">-32%</span>
@@ -656,11 +198,15 @@
             <div class="footer-section">
                 <h4>Redes Sociais</h4>
                 <div style="display: flex; gap: 10px; font-size: 20px;"> <span>📘</span> <span>📸</span> <span>🐦</span>
-                    <span>📺</span> </div>
+                    <span>📺</span>
+                </div>
             </div>
         </div>
         <div class="footer-bottom"> &copy; 2026 PCSIMO S.A. Todos os direitos reservados. </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

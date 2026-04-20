@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #b81a05;
+  --secondary-color: #b81a05;
+  --background-color: #f2f3f4;
+  --white: #ffffff;
+  --text-color: #42464d;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.logo span {
+  color: var(--secondary-color);
+}
+
+h2 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-login:hover {
+  background-color: #b81a05;
+}
+
+.divider {
+  margin: 20px 0;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.divider span {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 10px;
+  color: #999;
+  font-size: 12px;
+}
+
+.btn-register {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.btn-register:hover {
+  background-color: #f0f7ff;
+}
+
+.footer-links {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.footer-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
