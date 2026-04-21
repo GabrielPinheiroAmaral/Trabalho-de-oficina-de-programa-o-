@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .produto-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .produto-imagem {
+            flex: 1;
+            min-width: 300px;
+            background-color: #eee;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* Altura fixa para o placeholder */
+        }
+        .produto-imagem img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .produto-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        .produto-info h1 {
+            margin-top: 0;
+            color: #222;
+        }
+        .preco {
+            font-size: 24px;
+            color: #28a745;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .especificacoes {
+            list-style-type: none;
+            padding: 0;
+        }
+        .especificacoes li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .btn-comprar {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .btn-comprar:hover {
+            background-color: #0056b3;
+        }
+        .voltar-home {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 15px;
+            text-decoration: none;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="produto-container">
+        <div class="produto-imagem">
+            <span style="color: #999;">[Imagem do Produto Aqui]</span>
+        </div>
+
+        <div class="produto-info">
+            <h1>headset</h1>
+            <p>Uma breve descrição sobre o produto, explicando seus benefícios e porque o usuário deve comprá-lo.</p>
+            
+            <div class="preco">R$ 199,90</div>
+            
+            <h3>Especificações Técnicas:</h3>
+            <ul class="especificacoes">
+                <li><strong>Marca:</strong> Marca Exemplo</li>
+                <li><strong>Modelo:</strong> Modelo 2026</li>
+                <li><strong>Material:</strong> Alta durabilidade</li>
+                <li><strong>Garantia:</strong> 12 meses</li>
+                <li><strong>Cor:</strong> Preto / Prata</li>
+            </ul>
+
+            <a href="#" class="btn-comprar">Adicionar ao Carrinho</a>
+            <a href="../index.html" class="voltar-home">← Voltar à Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
