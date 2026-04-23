@@ -1,99 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Pcismo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #666;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; 
-        }
-        .btn-submit {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-        .btn-submit:hover {
-            background-color: #218838;
-        }
-        .voltar {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            text-decoration: none;
-            color: #007bff;
-        }
-    </style>
+    <title>Criar Conta | Loja PCISMO!</title>
+
+    <link rel="stylesheet" href="../CSS/estilo3.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <h2>Crie sua conta</h2>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+    <div class="login-container">
+        <div class="logo">PCISMO!<span>!</span></div>
+        <h2>Crie sua conta!</h2>
+
+        <form action="login.html">
+
+            <div class="section-title">Dados pessoais</div>
+
+            <div class="input-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo" required>
             </div>
 
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required placeholder="Digite seu melhor e-mail">
+            <div class="input-group">
+                <label for="cpf">CPF ou CNPJ</label>
+                <input type="text" id="cpf" placeholder="Digite seu CPF ou CNPJ" required>
             </div>
 
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required placeholder="Crie uma senha">
+            <div class="input-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000">
             </div>
 
-            <div class="form-group">
-                <label for="confirma-senha">Confirme a Senha:</label>
-                <input type="password" id="confirma-senha" name="confirma-senha" required placeholder="Repita a senha">
+            <div class="section-title">Acesso</div>
+
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
             </div>
 
-            <button type="submit" class="btn-submit">Cadastrar</button>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Crie uma senha" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirmar senha</label>
+                <input type="password" id="confirm-password" placeholder="Repita a senha" required>
+            </div>
+
+            <button type="submit" class="btn-login">CRIAR CONTA</button>
         </form>
-        <a href="../index.html" class="voltar">Voltar para a Home</a>
+
+        <div class="divider">
+            <span>OU</span>
+        </div>
+        <a href="login.html" class="btn-register">JÁ TENHO CONTA</a>
+
+        <div class="footer-links">
+            <a href="#">Termos de uso</a> &nbsp;|&nbsp;
+            <a href="#">Política de privacidade</a>
+        </div>
     </div>
 
 </body>
-</html>
 
+</html>
