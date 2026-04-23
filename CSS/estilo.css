@@ -43,7 +43,7 @@ header {
         font-size: 36px !important;
         font-weight: 900; 
         font-style: italic;
-        background: linear-gradient(45deg, var(--secondary-orange), #ff8a50);
+        background: linear-gradient(45deg, var(--primary-red), #ff8a50);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -93,7 +93,7 @@ header {
     left: 709px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--secondary-orange);
+    background-color: var(--primary-red);
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -190,7 +190,7 @@ header {
 }
 
 .monte-pc {
-    background-color: var(--secondary-orange);
+    background-color: var(--primary-red);
     padding: 8px 15px;
     border-radius: 4px;
     font-size: 12px;
@@ -218,7 +218,7 @@ main {
 
 .carousel-container {
     display: flex;
-    width: calc(100% * 6 / 2);
+    width: calc(100% * 2 / 2);
     gap: 20px;
     height: 400px;
     animation: slideInfinite 30s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -298,9 +298,9 @@ main {
 }
 
 .btn-banner {
-    background-color: var(--secondary-orange);
+    background-color: var(--primary-red);
     color: white;
-    padding: 12px 30px;
+    padding: 12px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
